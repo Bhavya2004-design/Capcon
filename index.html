@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovalabs</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    text-align:center;
+    width:90%;
+    max-width:420px;
+}
+
+h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    opacity:0.8;
+    margin-bottom:30px;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.card{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(255,255,255,0.08);
+    padding:18px 20px;
+    border-radius:20px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    background:rgba(255,255,255,0.15);
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.icon{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+}
+
+.text{
+    font-weight:600;
+}
+
+.arrow{
+    opacity:0.7;
+    font-size:22px;
+}
+
+.footer{
+    margin-top:25px;
+    opacity:0.7;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Innovalabs</h1>
+    <p class="subtitle">In collaboration with Globentech</p>
+
+    <div class="menu">
+        <a href="team.html" class="card">
+            <div class="left">
+                <div class="icon">👥</div>
+                <div class="text">Meet the Team</div>
+            </div>
+            <div class="arrow">›</div>
+        </a>
+
+        <a href="https://3-20-196-151.nip.io/" target="_blank" rel="noopener noreferrer" class="card">
+            <div class="left">
+                <div class="icon">🌐</div>
+                <div class="text">Hop into Live Demo</div>
+            </div>
+            <div class="arrow">›</div>
+        </a>
+    </div>
+
+    <div class="footer">
+        Tap an option to explore 🚀
+    </div>
+</div>
+
+</body>
+</html>
