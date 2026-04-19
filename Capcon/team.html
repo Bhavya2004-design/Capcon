@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team | Innovalabs</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background:linear-gradient(135deg,#0f172a,#1e3a8a);
+      color:white;
+    }
+
+    .header{
+      text-align:center;
+      padding:40px 16px 20px;
+    }
+
+    .header h1{
+      font-size:2.2rem;
+      margin-bottom:6px;
+    }
+
+    .header p{
+      opacity:0.85;
+    }
+
+    .reveal-box{
+      width:calc(100% - 24px);
+      max-width:540px;
+      margin:22px auto 0;
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(10px);
+      border-radius:18px;
+      padding:20px 18px;
+      text-align:center;
+    }
+
+    .reveal-btn{
+      margin-top:14px;
+      padding:12px 18px;
+      border:none;
+      border-radius:10px;
+      background:#6366f1;
+      color:white;
+      font-weight:700;
+      cursor:pointer;
+      transition:0.2s;
+    }
+
+    .reveal-btn:hover{
+      transform:translateY(-2px);
+      background:#5558ee;
+    }
+
+    .team{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+      max-width:1050px;
+      margin:20px auto;
+      padding:0 16px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(12px);
+      border-radius:18px;
+      padding:22px 16px;
+      text-align:center;
+      box-shadow:0 8px 20px rgba(0,0,0,0.18);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .avatar{
+      width:110px;
+      height:110px;
+      margin:0 auto 12px;
+      border-radius:50%;
+      overflow:hidden;
+      border:3px solid #60a5fa;
+      box-shadow:0 0 15px rgba(96,165,250,0.4);
+    }
+
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center top;
+    }
+
+    .card h3{
+      color:#c7d2fe;
+      margin-bottom:6px;
+    }
+
+    .card p{
+      margin-bottom:14px;
+    }
+
+    .linkedin-btn{
+      display:inline-block;
+      background:#0a66c2;
+      color:white;
+      text-decoration:none;
+      padding:10px 16px;
+      border-radius:10px;
+      font-weight:700;
+      border:2px solid #60a5fa;
+      transition:0.2s;
+    }
+
+    .linkedin-btn:hover{
+      background:#0957a5;
+      transform:translateY(-2px);
+    }
+
+    .finish{
+      text-align:center;
+      margin:30px;
+    }
+
+    .finish a{
+      background:#6366f1;
+      color:white;
+      padding:12px 22px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    @media(max-width:768px){
+      .team{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Meet Our Team</h1>
+    <p>Innovalabs × Globentech</p>
+
+    <div class="reveal-box">
+      <h3>Want to meet the innovators?</h3>
+      <p>Tap below 👇</p>
+      <button class="reveal-btn" onclick="reveal()">Reveal Team</button>
+    </div>
+  </div>
+
+  <div id="team" class="team" style="display:none;">
+
+    <div class="card">
+      <div class="avatar"><img src="images/bhavya.jpeg" alt="Bhavya"></div>
+      <h3>Bhavya</h3>
+      <p>Frontend Developer</p>
+      <a href="https://www.linkedin.com/in/bhavya-bhavya-0a954b292/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">LinkedIn</a>
+    </div>
+
+    <div class="card">
+      <div class="avatar"><img src="images/Justice.png" alt="Justice"></div>
+      <h3>Justice</h3>
+      <p>Backend Developer</p>
+      <a href="https://www.linkedin.com/in/justice-mazerolle-119690336/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">LinkedIn</a>
+    </div>
+
+    <div class="card">
+      <div class="avatar"><img src="images/gagan.jpeg" alt="Gaganpreet"></div>
+      <h3>Gaganpreet</h3>
+      <p>Frontend Developer</p>
+      <a href="https://www.linkedin.com/in/gaganpreet-kaur-b09b73339/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">LinkedIn</a>
+    </div>
+
+    <div class="card">
+      <div class="avatar"><img src="images/ashnoor.jpg" alt="Ashnoor"></div>
+      <h3>Ashnoor</h3>
+      <p>Backend Developer</p>
+      <a href="https://www.linkedin.com/in/ashnoor-kaur-2005ak" target="_blank" rel="noopener noreferrer" class="linkedin-btn">LinkedIn</a>
+    </div>
+
+    <div class="card">
+      <div class="avatar"><img src="images/ahmad.jpg" alt="Ahmad"></div>
+      <h3>Ahmad</h3>
+      <p>Project Manager</p>
+      <a href="https://www.linkedin.com/in/ahmadfakhry99/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">LinkedIn</a>
+    </div>
+
+    <div class="card">
+      <div class="avatar"><img src="images/ravneet.jpg" alt="Ravneet"></div>
+      <h3>Ravneet</h3>
+      <p>Database Administrator</p>
+      <a href="https://www.linkedin.com/in/ravneet-kaur-328208313" target="_blank" rel="noopener noreferrer" class="linkedin-btn">LinkedIn</a>
+    </div>
+
+  </div>
+
+  <div id="finish" class="finish" style="display:none;">
+    <a href="final.html">Finish →</a>
+  </div>
+
+  <script>
+    function reveal(){
+      document.getElementById("team").style.display = "grid";
+      document.getElementById("finish").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
